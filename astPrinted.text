@@ -1,4 +1,7 @@
-<TYPE PersonDelomboked>
+<TYPE Person>
+  <ANNOTATION: @CommonsLog() />
+  <ANNOTATION: @DataReceived(value = "VALID", controller = "Mavenproject1Controller") />
+  <ANNOTATION: @Getter() />
   <ANNOTATION: @PrintAST() />
   <DEFAULTCONSTRUCTOR <init>> returns: null
     <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
@@ -51,12 +54,9 @@
         java.util.ArrayList<>
         <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
           java.util.ArrayList
-          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+          <class com.sun.tools.javac.tree.JCTree$JCIdent>
             java.util
-            <class com.sun.tools.javac.tree.JCTree$JCIdent>
-              java
-            </class com.sun.tools.javac.tree.JCTree$JCIdent>
-          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+          </class com.sun.tools.javac.tree.JCTree$JCIdent>
         </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
       </class com.sun.tools.javac.tree.JCTree$JCTypeApply>
     </class com.sun.tools.javac.tree.JCTree$JCNewClass>
@@ -90,171 +90,55 @@
     <ANNOTATION: @java.lang.SuppressWarnings(value = "all") />
     <ANNOTATION: @javax.annotation.Generated(value = "lombok") />
   </FIELD de.sourcepark.smd.base.queue.ISCPQueue queue>
-  <METHOD test> returns: void
-    <LOCAL TestFuture testF>
-      <class com.sun.tools.javac.tree.JCTree$JCNewClass>
-        new TestFuture()
-        <class com.sun.tools.javac.tree.JCTree$JCIdent>
-          TestFuture
-        </class com.sun.tools.javac.tree.JCTree$JCIdent>
-      </class com.sun.tools.javac.tree.JCTree$JCNewClass>
-    </LOCAL TestFuture testF>
-    <LOCAL TestFuture testF2>
-      <class com.sun.tools.javac.tree.JCTree$JCNewClass>
-        new TestFuture()
-        <class com.sun.tools.javac.tree.JCTree$JCIdent>
-          TestFuture
-        </class com.sun.tools.javac.tree.JCTree$JCIdent>
-      </class com.sun.tools.javac.tree.JCTree$JCNewClass>
-    </LOCAL TestFuture testF2>
-    <LOCAL TestFuture testF3>
-      <class com.sun.tools.javac.tree.JCTree$JCNewClass>
-        new TestFuture()
-        <class com.sun.tools.javac.tree.JCTree$JCIdent>
-          TestFuture
-        </class com.sun.tools.javac.tree.JCTree$JCIdent>
-      </class com.sun.tools.javac.tree.JCTree$JCNewClass>
-    </LOCAL TestFuture testF3>
-    <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-      this.future.add(testF);
-      <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-        this.future.add(testF)
-        <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-          this.future.add
-          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-            this.future
-            <class com.sun.tools.javac.tree.JCTree$JCIdent>
-              this
-            </class com.sun.tools.javac.tree.JCTree$JCIdent>
-          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-        </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-        <class com.sun.tools.javac.tree.JCTree$JCIdent>
-          testF
-        </class com.sun.tools.javac.tree.JCTree$JCIdent>
-      </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-    </class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-    <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-      this.future.add(testF2);
-      <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-        this.future.add(testF2)
-        <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-          this.future.add
-          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-            this.future
-            <class com.sun.tools.javac.tree.JCTree$JCIdent>
-              this
-            </class com.sun.tools.javac.tree.JCTree$JCIdent>
-          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-        </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-        <class com.sun.tools.javac.tree.JCTree$JCIdent>
-          testF2
-        </class com.sun.tools.javac.tree.JCTree$JCIdent>
-      </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-    </class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-    <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-      this.future.add(testF3);
-      <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-        this.future.add(testF3)
-        <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-          this.future.add
-          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-            this.future
-            <class com.sun.tools.javac.tree.JCTree$JCIdent>
-              this
-            </class com.sun.tools.javac.tree.JCTree$JCIdent>
-          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-        </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-        <class com.sun.tools.javac.tree.JCTree$JCIdent>
-          testF3
-        </class com.sun.tools.javac.tree.JCTree$JCIdent>
-      </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-    </class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-  </XMETHOD test>
   <METHOD doCleanupOrProcessing> returns: void
     <ANNOTATION: @Override() />
-    <METHODARG Future f>
-    </METHODARG Future f>
+    <METHODARG Future d>
+    </METHODARG Future d>
     <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-      log.info("In doCleanupOrProcessing method " + f.hashCode());
+      System.out.println("d ist: " + d);
       <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-        log.info("In doCleanupOrProcessing method " + f.hashCode())
+        System.out.println("d ist: " + d)
         <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-          log.info
-          <class com.sun.tools.javac.tree.JCTree$JCIdent>
-            log
-          </class com.sun.tools.javac.tree.JCTree$JCIdent>
+          System.out.println
+          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+            System.out
+            <class com.sun.tools.javac.tree.JCTree$JCIdent>
+              System
+            </class com.sun.tools.javac.tree.JCTree$JCIdent>
+          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
         </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
         <class com.sun.tools.javac.tree.JCTree$JCBinary>
-          "In doCleanupOrProcessing method " + f.hashCode()
+          "d ist: " + d
           <class com.sun.tools.javac.tree.JCTree$JCLiteral>
-            "In doCleanupOrProcessing method "
+            "d ist: "
           </class com.sun.tools.javac.tree.JCTree$JCLiteral>
-          <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-            f.hashCode()
-            <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-              f.hashCode
-              <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                f
-              </class com.sun.tools.javac.tree.JCTree$JCIdent>
-            </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-          </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
+          <class com.sun.tools.javac.tree.JCTree$JCIdent>
+            d
+          </class com.sun.tools.javac.tree.JCTree$JCIdent>
         </class com.sun.tools.javac.tree.JCTree$JCBinary>
       </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
     </class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
   </XMETHOD doCleanupOrProcessing>
   <METHOD doStatusProcessing> returns: void
     <ANNOTATION: @Override() />
-    <class com.sun.tools.javac.tree.JCTree$JCTry>
-      try {
-    throw new Exception();
-} catch (final SMDConfigurationException | ConfigurationException ex) {
-    log.error("SMDConfigurationException: Configuration error occurred.", ex);
-}
-      <class com.sun.tools.javac.tree.JCTree$JCBlock>
-        {
-    throw new Exception();
-}
-        <class com.sun.tools.javac.tree.JCTree$JCThrow>
-          throw new Exception();
-          <class com.sun.tools.javac.tree.JCTree$JCNewClass>
-            new Exception()
+    <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
+      System.out.println("statusprocessing");
+      <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
+        System.out.println("statusprocessing")
+        <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+          System.out.println
+          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+            System.out
             <class com.sun.tools.javac.tree.JCTree$JCIdent>
-              Exception
+              System
             </class com.sun.tools.javac.tree.JCTree$JCIdent>
-          </class com.sun.tools.javac.tree.JCTree$JCNewClass>
-        </class com.sun.tools.javac.tree.JCTree$JCThrow>
-      </class com.sun.tools.javac.tree.JCTree$JCBlock>
-      <class com.sun.tools.javac.tree.JCTree$JCCatch>
-         catch (final SMDConfigurationException | ConfigurationException ex) {
-    log.error("SMDConfigurationException: Configuration error occurred.", ex);
-}
-        <LOCAL SMDConfigurationException | ConfigurationException ex>
-        </LOCAL SMDConfigurationException | ConfigurationException ex>
-        <class com.sun.tools.javac.tree.JCTree$JCBlock>
-          {
-    log.error("SMDConfigurationException: Configuration error occurred.", ex);
-}
-          <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-            log.error("SMDConfigurationException: Configuration error occurred.", ex);
-            <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-              log.error("SMDConfigurationException: Configuration error occurred.", ex)
-              <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                log.error
-                <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                  log
-                </class com.sun.tools.javac.tree.JCTree$JCIdent>
-              </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-              <class com.sun.tools.javac.tree.JCTree$JCLiteral>
-                "SMDConfigurationException: Configuration error occurred."
-              </class com.sun.tools.javac.tree.JCTree$JCLiteral>
-              <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                ex
-              </class com.sun.tools.javac.tree.JCTree$JCIdent>
-            </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-          </class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-        </class com.sun.tools.javac.tree.JCTree$JCBlock>
-      </class com.sun.tools.javac.tree.JCTree$JCCatch>
-    </class com.sun.tools.javac.tree.JCTree$JCTry>
+          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+        </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+        <class com.sun.tools.javac.tree.JCTree$JCLiteral>
+          "statusprocessing"
+        </class com.sun.tools.javac.tree.JCTree$JCLiteral>
+      </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
+    </class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
   </XMETHOD doStatusProcessing>
   <METHOD init> returns: void
     <ANNOTATION: @java.lang.SuppressWarnings(value = "all") />
@@ -386,7 +270,7 @@
         log.error("Unwanted modification detected. Message is flagged as dirty.");
         return;
     }
-    if (scpd.getCommand("<Custom Command>") != null) {
+    if (scpd.getCommand("VALID") != null) {
         for (final java.util.concurrent.Future f : future) {
             if (f.isDone()) {
                 this.doCleanupOrProcessing(f);
@@ -403,9 +287,9 @@
     } else {
         log.error("Unprocessable message received. Possible conflict between command and context. Check message.");
     }
-} catch (final SMDConfigurationException ex) {
+} catch (final de.sourcepark.smd.base.config.SMDConfigurationException ex) {
     log.error("SMDConfigurationException: Configuration error occurred.", ex);
-} catch (final ConfigurationException ex2) {
+} catch (final org.apache.commons.configuration.ConfigurationException ex2) {
     log.error("ConfigurationException: Configuration error occurred.", ex2);
 } catch (final java.lang.Throwable th) {
     log.fatal("Unexpected Exception", th);
@@ -420,7 +304,7 @@
         log.error("Unwanted modification detected. Message is flagged as dirty.");
         return;
     }
-    if (scpd.getCommand("<Custom Command>") != null) {
+    if (scpd.getCommand("VALID") != null) {
         for (final java.util.concurrent.Future f : future) {
             if (f.isDone()) {
                 this.doCleanupOrProcessing(f);
@@ -520,7 +404,7 @@
           </class com.sun.tools.javac.tree.JCTree$JCBlock>
         </class com.sun.tools.javac.tree.JCTree$JCIf>
         <class com.sun.tools.javac.tree.JCTree$JCIf>
-          if (scpd.getCommand("<Custom Command>") != null) {
+          if (scpd.getCommand("VALID") != null) {
     for (final java.util.concurrent.Future f : future) {
         if (f.isDone()) {
             this.doCleanupOrProcessing(f);
@@ -538,11 +422,11 @@
     log.error("Unprocessable message received. Possible conflict between command and context. Check message.");
 }
           <class com.sun.tools.javac.tree.JCTree$JCParens>
-            (scpd.getCommand("<Custom Command>") != null)
+            (scpd.getCommand("VALID") != null)
             <class com.sun.tools.javac.tree.JCTree$JCBinary>
-              scpd.getCommand("<Custom Command>") != null
+              scpd.getCommand("VALID") != null
               <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-                scpd.getCommand("<Custom Command>")
+                scpd.getCommand("VALID")
                 <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                   scpd.getCommand
                   <class com.sun.tools.javac.tree.JCTree$JCIdent>
@@ -550,7 +434,7 @@
                   </class com.sun.tools.javac.tree.JCTree$JCIdent>
                 </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                 <class com.sun.tools.javac.tree.JCTree$JCLiteral>
-                  "<Custom Command>"
+                  "VALID"
                 </class com.sun.tools.javac.tree.JCTree$JCLiteral>
               </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
               <class com.sun.tools.javac.tree.JCTree$JCLiteral>
@@ -698,28 +582,10 @@
                   new de.sourcepark.smd.base.util.scp.SCPStatusObject(scpd)
                   <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                     de.sourcepark.smd.base.util.scp.SCPStatusObject
-                    <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+                    <class com.sun.tools.javac.tree.JCTree$JCIdent>
                       de.sourcepark.smd.base.util.scp
-                      <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                        de.sourcepark.smd.base.util
-                        <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                          de.sourcepark.smd.base
-                          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                            de.sourcepark.smd
-                            <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                              de.sourcepark
-                              <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                                de
-                              </class com.sun.tools.javac.tree.JCTree$JCIdent>
-                            </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                        </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                      </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                    </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+                    </class com.sun.tools.javac.tree.JCTree$JCIdent>
                   </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                  <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                    scpd
-                  </class com.sun.tools.javac.tree.JCTree$JCIdent>
                 </class com.sun.tools.javac.tree.JCTree$JCNewClass>
               </LOCAL de.sourcepark.smd.base.util.scp.SCPStatusObject scps>
               <LOCAL de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam>
@@ -750,24 +616,9 @@
                     new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class))
                     <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                       de.sourcepark.smd.base.util.scp.SCPParameter
-                      <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+                      <class com.sun.tools.javac.tree.JCTree$JCIdent>
                         de.sourcepark.smd.base.util.scp
-                        <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                          de.sourcepark.smd.base.util
-                          <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                            de.sourcepark.smd.base
-                            <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                              de.sourcepark.smd
-                              <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                                de.sourcepark
-                                <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                                  de
-                                </class com.sun.tools.javac.tree.JCTree$JCIdent>
-                              </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                            </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                          </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                        </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                      </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+                      </class com.sun.tools.javac.tree.JCTree$JCIdent>
                     </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                     <class com.sun.tools.javac.tree.JCTree$JCLiteral>
                       "Version"
@@ -944,11 +795,11 @@
         </class com.sun.tools.javac.tree.JCTree$JCIf>
       </class com.sun.tools.javac.tree.JCTree$JCBlock>
       <class com.sun.tools.javac.tree.JCTree$JCCatch>
-         catch (final SMDConfigurationException ex) {
+         catch (final de.sourcepark.smd.base.config.SMDConfigurationException ex) {
     log.error("SMDConfigurationException: Configuration error occurred.", ex);
 }
-        <LOCAL SMDConfigurationException ex>
-        </LOCAL SMDConfigurationException ex>
+        <LOCAL de.sourcepark.smd.base.config.SMDConfigurationException ex>
+        </LOCAL de.sourcepark.smd.base.config.SMDConfigurationException ex>
         <class com.sun.tools.javac.tree.JCTree$JCBlock>
           {
     log.error("SMDConfigurationException: Configuration error occurred.", ex);
@@ -974,11 +825,11 @@
         </class com.sun.tools.javac.tree.JCTree$JCBlock>
       </class com.sun.tools.javac.tree.JCTree$JCCatch>
       <class com.sun.tools.javac.tree.JCTree$JCCatch>
-         catch (final ConfigurationException ex2) {
+         catch (final org.apache.commons.configuration.ConfigurationException ex2) {
     log.error("ConfigurationException: Configuration error occurred.", ex2);
 }
-        <LOCAL ConfigurationException ex2>
-        </LOCAL ConfigurationException ex2>
+        <LOCAL org.apache.commons.configuration.ConfigurationException ex2>
+        </LOCAL org.apache.commons.configuration.ConfigurationException ex2>
         <class com.sun.tools.javac.tree.JCTree$JCBlock>
           {
     log.error("ConfigurationException: Configuration error occurred.", ex2);
@@ -1074,4 +925,4 @@
       </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
     </class com.sun.tools.javac.tree.JCTree$JCReturn>
   </XMETHOD getQueue>
-</TYPE PersonDelomboked>
+</TYPE Person>

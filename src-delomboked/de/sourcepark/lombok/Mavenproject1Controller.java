@@ -17,13 +17,15 @@ import org.apache.commons.configuration.ConfigurationException;
 public class Mavenproject1Controller implements Callable{
     
     public final static String QUEUE_ID = "Mavenproject1ID";
+    private SCPDataObject scp;
         
     public Mavenproject1Controller(SCPDataObject scp)throws SMDConfigurationException, ConfigurationException{
+    this.scp = scp;
     }
 
     @Override
     public Object call() throws Exception {
-        return null;       
+        return "Class: "+this.getClass().getName()+" with Parameter: "+scp.getClass().getName();       
     }
     
 }
