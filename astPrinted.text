@@ -1,7 +1,5 @@
 <TYPE Person>
-  <ANNOTATION: @CommonsLog() />
-  <ANNOTATION: @DataReceived(value = "VALID", controller = "Mavenproject1Controller") />
-  <ANNOTATION: @Getter() />
+  <ANNOTATION: @DataReceived(value = "INVALID", controller = "Mavenproject1Controller") />
   <ANNOTATION: @PrintAST() />
   <DEFAULTCONSTRUCTOR <init>> returns: null
     <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
@@ -270,7 +268,7 @@
         log.error("Unwanted modification detected. Message is flagged as dirty.");
         return;
     }
-    if (scpd.getCommand("VALID") != null) {
+    if (scpd.getCommand("INVALID") != null) {
         for (final java.util.concurrent.Future f : future) {
             if (f.isDone()) {
                 this.doCleanupOrProcessing(f);
@@ -279,8 +277,7 @@
         future.add(processingThreads.submit(new Mavenproject1Controller(scpd)));
     } else if (scpd.getCommand("ALIVE") != null) {
         de.sourcepark.smd.base.util.scp.SCPStatusObject scps = new de.sourcepark.smd.base.util.scp.SCPStatusObject(scpd);
-        de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam = scps.getCommand("ALIVE");
-        scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
+        scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
         queue.offer(scps);
     } else if ((scpd.getCommand("STOP") != null) && scpd.getSource().equalsIgnoreCase(de.sourcepark.smd.base.config.SMDConfiguration.getInstance().getIdentity())) {
         this.stop();
@@ -304,7 +301,7 @@
         log.error("Unwanted modification detected. Message is flagged as dirty.");
         return;
     }
-    if (scpd.getCommand("VALID") != null) {
+    if (scpd.getCommand("INVALID") != null) {
         for (final java.util.concurrent.Future f : future) {
             if (f.isDone()) {
                 this.doCleanupOrProcessing(f);
@@ -313,8 +310,7 @@
         future.add(processingThreads.submit(new Mavenproject1Controller(scpd)));
     } else if (scpd.getCommand("ALIVE") != null) {
         de.sourcepark.smd.base.util.scp.SCPStatusObject scps = new de.sourcepark.smd.base.util.scp.SCPStatusObject(scpd);
-        de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam = scps.getCommand("ALIVE");
-        scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
+        scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
         queue.offer(scps);
     } else if ((scpd.getCommand("STOP") != null) && scpd.getSource().equalsIgnoreCase(de.sourcepark.smd.base.config.SMDConfiguration.getInstance().getIdentity())) {
         this.stop();
@@ -404,7 +400,7 @@
           </class com.sun.tools.javac.tree.JCTree$JCBlock>
         </class com.sun.tools.javac.tree.JCTree$JCIf>
         <class com.sun.tools.javac.tree.JCTree$JCIf>
-          if (scpd.getCommand("VALID") != null) {
+          if (scpd.getCommand("INVALID") != null) {
     for (final java.util.concurrent.Future f : future) {
         if (f.isDone()) {
             this.doCleanupOrProcessing(f);
@@ -413,8 +409,7 @@
     future.add(processingThreads.submit(new Mavenproject1Controller(scpd)));
 } else if (scpd.getCommand("ALIVE") != null) {
     de.sourcepark.smd.base.util.scp.SCPStatusObject scps = new de.sourcepark.smd.base.util.scp.SCPStatusObject(scpd);
-    de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam = scps.getCommand("ALIVE");
-    scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
+    scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
     queue.offer(scps);
 } else if ((scpd.getCommand("STOP") != null) && scpd.getSource().equalsIgnoreCase(de.sourcepark.smd.base.config.SMDConfiguration.getInstance().getIdentity())) {
     this.stop();
@@ -422,11 +417,11 @@
     log.error("Unprocessable message received. Possible conflict between command and context. Check message.");
 }
           <class com.sun.tools.javac.tree.JCTree$JCParens>
-            (scpd.getCommand("VALID") != null)
+            (scpd.getCommand("INVALID") != null)
             <class com.sun.tools.javac.tree.JCTree$JCBinary>
-              scpd.getCommand("VALID") != null
+              scpd.getCommand("INVALID") != null
               <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-                scpd.getCommand("VALID")
+                scpd.getCommand("INVALID")
                 <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                   scpd.getCommand
                   <class com.sun.tools.javac.tree.JCTree$JCIdent>
@@ -434,7 +429,7 @@
                   </class com.sun.tools.javac.tree.JCTree$JCIdent>
                 </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                 <class com.sun.tools.javac.tree.JCTree$JCLiteral>
-                  "VALID"
+                  "INVALID"
                 </class com.sun.tools.javac.tree.JCTree$JCLiteral>
               </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
               <class com.sun.tools.javac.tree.JCTree$JCLiteral>
@@ -541,8 +536,7 @@
           <class com.sun.tools.javac.tree.JCTree$JCIf>
             if (scpd.getCommand("ALIVE") != null) {
     de.sourcepark.smd.base.util.scp.SCPStatusObject scps = new de.sourcepark.smd.base.util.scp.SCPStatusObject(scpd);
-    de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam = scps.getCommand("ALIVE");
-    scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
+    scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
     queue.offer(scps);
 } else if ((scpd.getCommand("STOP") != null) && scpd.getSource().equalsIgnoreCase(de.sourcepark.smd.base.config.SMDConfiguration.getInstance().getIdentity())) {
     this.stop();
@@ -573,8 +567,7 @@
             <class com.sun.tools.javac.tree.JCTree$JCBlock>
               {
     de.sourcepark.smd.base.util.scp.SCPStatusObject scps = new de.sourcepark.smd.base.util.scp.SCPStatusObject(scpd);
-    de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam = scps.getCommand("ALIVE");
-    scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
+    scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
     queue.offer(scps);
 }
               <LOCAL de.sourcepark.smd.base.util.scp.SCPStatusObject scps>
@@ -588,29 +581,24 @@
                   </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                 </class com.sun.tools.javac.tree.JCTree$JCNewClass>
               </LOCAL de.sourcepark.smd.base.util.scp.SCPStatusObject scps>
-              <LOCAL de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam>
-                <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-                  scps.getCommand("ALIVE")
-                  <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                    scps.getCommand
-                    <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                      scps
-                    </class com.sun.tools.javac.tree.JCTree$JCIdent>
-                  </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                  <class com.sun.tools.javac.tree.JCTree$JCLiteral>
-                    "ALIVE"
-                  </class com.sun.tools.javac.tree.JCTree$JCLiteral>
-                </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-              </LOCAL de.sourcepark.smd.base.util.scp.SCPCommand scpsAddParam>
               <class com.sun.tools.javac.tree.JCTree$JCExpressionStatement>
-                scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
+                scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)));
                 <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
-                  scpsAddParam.addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)))
+                  scps.getCommand("ALIVE").addParam(new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class)))
                   <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
-                    scpsAddParam.addParam
-                    <class com.sun.tools.javac.tree.JCTree$JCIdent>
-                      scpsAddParam
-                    </class com.sun.tools.javac.tree.JCTree$JCIdent>
+                    scps.getCommand("ALIVE").addParam
+                    <class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
+                      scps.getCommand("ALIVE")
+                      <class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+                        scps.getCommand
+                        <class com.sun.tools.javac.tree.JCTree$JCIdent>
+                          scps
+                        </class com.sun.tools.javac.tree.JCTree$JCIdent>
+                      </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
+                      <class com.sun.tools.javac.tree.JCTree$JCLiteral>
+                        "ALIVE"
+                      </class com.sun.tools.javac.tree.JCTree$JCLiteral>
+                    </class com.sun.tools.javac.tree.JCTree$JCMethodInvocation>
                   </class com.sun.tools.javac.tree.JCTree$JCFieldAccess>
                   <class com.sun.tools.javac.tree.JCTree$JCNewClass>
                     new de.sourcepark.smd.base.util.scp.SCPParameter("Version", "string", de.sourcepark.smd.base.config.SMDConfiguration.getVersionString(Person.class))

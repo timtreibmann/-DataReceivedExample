@@ -25,7 +25,9 @@ public class Mavenproject1Controller implements Callable{
 
     @Override
     public Object call() throws Exception {
-        return "Class: "+this.getClass().getName()+" with Parameter: "+scp.getClass().getName();       
+        
+        return "Class: "+this.getClass().getName()+" with Parameter: "+scp.getClass().getName();
+        
     }
     
 }

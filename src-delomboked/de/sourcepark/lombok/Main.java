@@ -30,7 +30,7 @@ public class Main {
     public static void main(String[] args) {
       
         Person person = new Person();    
-        ConnectionEvent evt = new ConnectionEvent(false, false,true,true,SMDConfiguration.getInstance().getIdentity());
+        ConnectionEvent evt = new ConnectionEvent(false, false,false,false,SMDConfiguration.getInstance().getIdentity());
         
         TestFuture e0 = new TestFuture();
         TestFuture e1 = new TestFuture();

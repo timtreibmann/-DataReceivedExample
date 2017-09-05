@@ -18,7 +18,7 @@ import lombok.extern.apachecommons.CommonsLog;
 
 @CommonsLog
 @DataReceived(
-        value = "VALID",
+        value = "INVALID",
         controller = "Mavenproject1Controller"
 )
 //@Getter Annotation only need to access and shut down invoked threads 
@@ -29,6 +29,7 @@ public class Person extends AbstractOCL implements PersonInterface{
  @Override
  public void doCleanupOrProcessing(Future d){
      System.out.println("d ist: "+d);
+     
  }
 
  @Override
