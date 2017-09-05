@@ -29,23 +29,24 @@ public class Main {
      */
     public static void main(String[] args) {
       
-        Person person = new Person();    
-        ConnectionEvent evt = new ConnectionEvent(false, false,true,true,SMDConfiguration.getInstance().getIdentity());
+        Person person = new Person();  
+        
+        ConnectionEvent evt = new ConnectionEvent(false, false,false,false,SMDConfiguration.getInstance().getIdentity());
         
         TestFuture e0 = new TestFuture();
         TestFuture e1 = new TestFuture();
         person.getFuture().add(e0);
         person.getFuture().add(e1);
         
+        
         person.dataReceived(evt);  
         
+        System.out.println(person.getQueue().toString());
         System.out.println("future: "+person.getFuture().size());
         person.getFuture().forEach(f -> {
             try {
                 System.out.println("FutureElement: "+ f.get());
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ExecutionException ex) {
+            } catch (InterruptedException | ExecutionException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
 });
