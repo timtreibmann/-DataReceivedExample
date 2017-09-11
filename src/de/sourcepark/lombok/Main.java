@@ -63,7 +63,7 @@ public class Main {
         //Objekt der annotierten Klasse
         Person person = new Person();
         //Erstellung des Objektes des Parameters für die Methode dataReceived(ConnectionEvent evt)
-        ConnectionEvent evt = new ConnectionEvent(true, false, false, false, SMDConfiguration.getInstance().getIdentity());
+        ConnectionEvent evt = new ConnectionEvent(false, false, false, false, SMDConfiguration.getInstance().getIdentity());
 
         //Test-Objekte vom Typ Future die der Feldvariable future der mit @DataReceived 
         //annotierten Klasse Elementte hinzufügen um 2x Durchlauf der Forschleife 

@@ -12,7 +12,8 @@ import java.util.concurrent.TimeoutException;
 
 /**
  *
- * @author ttreibmann
+ * @author ttreibmann Testklasse um der Feldvariablen future weitere Elemente
+ * vom Typ Future hinzufügen zu können.
  */
 public class TestFuture implements Future<String> {
 
@@ -41,5 +42,5 @@ public class TestFuture implements Future<String> {
     public String get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

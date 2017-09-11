@@ -13,6 +13,9 @@ import org.apache.commons.configuration.ConfigurationException;
 /**
  *
  * @author ttreibmann
+ * In der Annotation @DataReceived als Parameter angegebene Controllerdatei.
+ * Injizierte Methode dataReceived(ConnectionEvent evt) greift auf
+ *     public final static String QUEUE_ID = "Mavenproject1ID" zu
  */
 public class Mavenproject1Controller implements Callable{
     

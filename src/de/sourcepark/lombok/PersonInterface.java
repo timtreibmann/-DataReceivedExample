@@ -10,12 +10,15 @@ import java.util.concurrent.Future;
 
 /**
  *
- * @author ttreibmann
+ * @author ttreibmann Schnittstelle die alle für die Annotation @DataReceived
+ * nötigen Methoden bereit stellt.
  */
 public interface PersonInterface {
-    
+
     public void dataReceived(ConnectionEvent evt);
+
     public void doCleanupOrProcessing(Future f);
-    public void doStatusProcessing()throws Exception;
-    
+
+    public void doStatusProcessing() throws Exception;
+
 }
